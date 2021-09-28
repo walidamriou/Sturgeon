@@ -24,7 +24,13 @@
 #define display_b1_pin      2  // The button of the display
 #define display_buzzer_pin  8  // The buzzer of the display
 
-#define display_buzzer_button_press 100
+#define display_init_leds_ON_all_time  1000 // ms
+#define display_init_leds_OFF_all_time 1000 // ms
+
+#define display_buzzer_init_time 500 // ms 
+#define display_buzzer_button_press 100 // ms
+#define display_buzzer_frequency 4000 // hz
+
 // variable define the status of the leds in the display (display leds software image)
 extern uint8_t display_leds_status;
 // variable for reading the pushbutton status
@@ -33,7 +39,10 @@ extern int lastbuttonState;
 // function prototyping  
 void display_config();
 void display_init();
+void display_button(uint8_t gpio,void (*callback_function)(void));
 void display_leds_update();
 void HAL_display_leds_update(uint8_t l1,uint8_t l2,uint8_t l3,uint8_t l4);
+void HAL_display_buzzer(uint8_t gpio,uint16_t frequency,uint16_t run_time_ms);
+void HAL_display_pin_config(uint8_t gpio,uint8_t direction);
 
 #endif
