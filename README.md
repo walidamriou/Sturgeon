@@ -6,10 +6,6 @@ I like to name the projects using names that give motivation and meaning. Sturge
 
 ### System block diagram
 
-- fan
-- main board
-- display
-
 ```
  ____________                                 _________________________________                ___________________________________________
 |            | <=== motor attack signal ==== |                                 |              |                                           |    
@@ -19,4 +15,7 @@ I like to name the projects using names that give motivation and meaning. Sturge
 
 ```
 
-
+### Use case
+- When the system start, all the leds ON then OFF.
+- Fan start by level 1.
+- the user can change the fan speed using the display (Four level available).
